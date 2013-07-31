@@ -1,7 +1,13 @@
 <div class="page-header">
   <h1>{{ page.title }} 
+	{% if site.tagline or page.tagline %}
+	{% if site.tagline %}
+		{% assign _tagline=site.tagline %}
+	{% endif %}
 	{% if page.tagline %}
-      <small>{{ page.tagline }}</small>
+		{% assign _tagline=page.tagline %}
+	{% endif %}
+      <small>{{ _tagline }}</small>
     {% endif %}
 </h1>
 </div>

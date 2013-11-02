@@ -4,7 +4,7 @@ This is blog theme compatible with Jekyll-Bootstrap
 
 ### Install Themes
 
-    $ rake theme:install git="https://github.com/jekyllbootstrap/theme-twitter.git"
+    $ rake theme:install git="git@github.com:lincolnge/theme-twitter-lin.git"
     
     
 The installer uses git to download the Theme Package and then installs it. If you have obtained a Theme Package in another way, such as zip download, you can manually place it into your ./_theme_packages folder and then run the installer with the name of the theme.

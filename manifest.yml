@@ -1,8 +1,8 @@
 ---
-name : lin-twitter
+name : twitter-lin
 website : http://lincolnge.github.io
-git_url : git@github.com:lincolnge/theme-twitter.git
-source_url : https://github.com/lincolnge/theme-twitter
+git_url : git@github.com:lincolnge/theme-twitter-lin.git
+source_url : https://github.com/lincolnge/theme-twitter-lin
 author:
   name : "lincolnge"
   website : http://lincolnge.github.io

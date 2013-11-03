@@ -18,7 +18,6 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
@@ -40,77 +39,75 @@
   <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>      
-
-
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-
-
-          <div class="nav-collapse">
-            <ul class="nav pull-left">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
-            </ul>
-            <ul class="nav pull-right social visible-desktop">
-              <li class="divider-vertical"></li>
-              {% if site.author.github %}
-                <li>
-                  <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
-                    <span class="hidden-desktop">Github</span>
-                  </a>
-                </li>
-              {% endif %}
-              {% if site.author.googleplus %}
-                <li>
-                  <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
-                    <span class="hidden-desktop">Google+</span>
-                  </a>
-                </li>
-              {% endif %}    
-              {% if site.author.twitter %}
-                <li>
-                  <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank">
-                  <span class="hidden-desktop">Twitter</span>
-                  </a>
-                </li>
-              {% endif %}                          
-              {% if site.author.facebook %}
-                <li>
-                  <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank">
-                    <span class="hidden-desktop">Facebook</span>
-                  </a>
-                </li>
-              {% endif %}           
-              {% if site.author.linkedin %}
-                <li>
-                  <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
-                    <span class="hidden-desktop">LinkedIn</span>
-                  </a>
-                </li>
-              {% endif %}                    
-              {% if site.author.feedburner %}
-                <li>
-                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
-                    <span class="hidden-desktop">FeedBurner</span>
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container-narrow navbar-inner">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
       </div>
-    </div>
-    <div class="navbar"></div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_list %}
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="divider-vertical"></li>
+          {% if site.author.github %}
+            <li>
+              <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
+                <span class="hidden-desktop">Github</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if site.author.googleplus %}
+            <li>
+              <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
+                <span class="hidden-desktop">Google+</span>
+              </a>
+            </li>
+          {% endif %}    
+          {% if site.author.twitter %}
+            <li>
+              <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank">
+              <span class="hidden-desktop">Twitter</span>
+              </a>
+            </li>
+          {% endif %}                          
+          {% if site.author.facebook %}
+            <li>
+              <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank">
+                <span class="hidden-desktop">Facebook</span>
+              </a>
+            </li>
+          {% endif %}           
+          {% if site.author.linkedin %}
+            <li>
+              <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
+                <span class="hidden-desktop">LinkedIn</span>
+              </a>
+            </li>
+          {% endif %}                    
+          {% if site.author.feedburner %}
+            <li>
+              <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
+                <span class="hidden-desktop">FeedBurner</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <nav class="navbar" role="navigation"></nav>
     <div class="container-narrow">
 
       <div class="content">
